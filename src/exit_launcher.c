@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   exit_launcher.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: alebross <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/12/14 19:06:37 by alebross          #+#    #+#             */
+/*   Updated: 2021/12/14 19:06:39 by alebross         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "philo.h"
 
 void	exit_launcher(t_data *d)
@@ -7,8 +19,6 @@ void	exit_launcher(t_data *d)
 
 	i = 0;
 	p = d->p;
-	if (d->nb == 1)
-		pthread_mutex_unlock(&p[0].lf);
 	while (i < d->nb)
 	{
 		pthread_join(p[i].thread, NULL);

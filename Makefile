@@ -6,12 +6,12 @@
 #    By: alebross <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/03 18:17:21 by alebross          #+#    #+#              #
-#    Updated: 2021/12/14 14:24:35 by alebross         ###   ########.fr        #
+#    Updated: 2021/12/14 18:51:33 by alebross         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror #-fsanitize=thread
 NAME = philo
 RM = rm -rf
 DIR_OBJ = other
