@@ -6,12 +6,12 @@
 #    By: alebross <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/03 18:17:21 by alebross          #+#    #+#              #
-#    Updated: 2021/12/14 19:36:35 by alebross         ###   ########.fr        #
+#    Updated: 2021/12/14 19:38:45 by alebross         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
-FLAGS = -Wall -Wextra -Werror -lpthread
+FLAGS = -Wall -Wextra -Werror
 NAME = philo
 RM = rm -rf
 DIR_OBJ = other
@@ -40,7 +40,7 @@ OBJS = ${addprefix ${DIR_OBJ}/,${SRCS:.c=.o}}
 all:${NAME}
 
 ${NAME}: ${OBJS}
-	${CC} ${FLAGS} ${OBJS} -o ${NAME}
+	${CC} ${FLAGS} ${OBJS} -o ${NAME} -lpthread
 
 ${DIR_OBJ}/%.o: ${DIR_SRC}/%.c
 	[ -d $(DIR_OBJ) ] || mkdir -p $(DIR_OBJ)
