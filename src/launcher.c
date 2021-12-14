@@ -6,7 +6,7 @@
 /*   By: alebross <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 19:06:44 by alebross          #+#    #+#             */
-/*   Updated: 2021/12/14 19:11:35 by alebross         ###   ########.fr       */
+/*   Updated: 2021/12/14 19:47:26 by alebross         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ static void	*life(void *arg)
 	p = (t_philo *)arg;
 	d = p->ds;
 	if (!p->id % 2)
-		usleep(150);
+		usleep(1500);
 	pthread_mutex_lock(&p->ds->data);
 	while (d->alive && !d->finish)
 	{
